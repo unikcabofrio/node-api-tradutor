@@ -1,18 +1,19 @@
 
-# API de Tradução de Texto
+# Text Translation API
 
-Bem-vindo à API de Tradução de Texto desenvolvida em Node.js! Esta API foi projetada para fornecer uma maneira simples e eficaz de traduzir textos para diferentes idiomas. Com esta API, você pode facilmente integrar funcionalidades de tradução em seus aplicativos, sites ou projetos.
+Welcome to the Text Translation API developed in Node.js! This API is designed to provide a simple and effective way to translate texts into different languages. With this API, you can easily integrate translation features into your applications, websites, or projects.
 
 
-## Como Usar
+## How to Use
 
-#### Retorna informações sobre a API
-
+#### Get Information about the API
+- Make a GET request to /translate to retrieve information about the API.
+##### Example Request
 ```http
   GET /translate
 ```
 
-#### Resposta
+#### Example Response
 ```http
 {
   "information": "...",
@@ -22,19 +23,20 @@ Bem-vindo à API de Tradução de Texto desenvolvida em Node.js! Esta API foi pr
 }
 ```
 
-#### Retornar o texto traduzido
+#### Translate Text
+- Make a GET request to /translate with query parameters to get the translated text.
 ```http
   GET /translate?tl=en&text=Olá, mundo!
 ```
 
 | Query   | Tipo       | Descrição                           |
 | :---------- | :--------- | :---------------------------------- |
-| `tl` | `string` | **Obrigatório**. Informa em que lingua deseja que o texto seja traduzido |
-| `text` | `string` | **Obrigatório**. Texto que deseja fazer a tradução |
+| `tl` | `string` | **Required**. Specifies the target language for translation. |
+| `text` | `string` | **Required**. The text you want to translate. |
 
 
 
-#### Resposta
+#### Example Response
 ```http
 {
   "translatedText": "Hello, world!",
@@ -43,47 +45,43 @@ Bem-vindo à API de Tradução de Texto desenvolvida em Node.js! Esta API foi pr
 
 
 
-## Rodando localmente
+## Running Locally
 
-Clone o projeto
-
+- Clone the project
 ```bash
   git clone https://github.com/unikcabofrio/api_trandutor_node.git
 ```
 
-Entre no diretório do projeto
-
+- Navigate to the project directory
 ```bash
   cd api_trandutor_node
 ```
 
-Instale as dependências
-
+- Install dependencies
 ```bash
   npm install
 ```
 
-Inicie o servidor
-
+- Start the server
 ```bash
   npm run dev
 ```
 
 
-## Variáveis de Ambiente
+## Environment Variables
 
-Para rodar esse projeto, você pode optar por alterar r as seguintes variáveis de ambiente no seu .env
+To run this project, modify the following environment variables in your .env file:
 
 `PORT`
 `HOST`
 
 
-## Stack utilizada
+## Used Stack
 
 **Back-end:** Node, fastify, free-translate
 
 
-## Autores
+## Authors
 
 - [@unikcabofrio](https://github.com/unikcabofrio)
 
