@@ -2,4 +2,8 @@
 # Traduzindo texto
 # lenguage = informe para qual lingua deseja realizar a tradução
 # text = informe o texto que deseja realizar a tradução
-GET http://192.168.0.100:3030?lenguage=pt&text=hi
+GET http://192.168.0.100:3030/translate
+
+###
+
+GET http://192.168.0.100:3030/translate?tl=pt&text=Your text here,hi
