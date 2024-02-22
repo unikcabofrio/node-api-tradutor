@@ -49,5 +49,5 @@ serve.listen({
     host: process.env.HOST || '0.0.0.0'
 }, (err) => {
     if (err) throw err
-    console.log(`\nHTTP server running on port ${process.env.PORT}`);
+    console.log(`\nHTTP server running`);
 })
